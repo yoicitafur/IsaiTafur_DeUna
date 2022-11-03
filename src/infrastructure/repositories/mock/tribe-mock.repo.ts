@@ -1,10 +1,9 @@
-import { MetricsModel, OrganizationModel, TribeModel } from "../../models";
-import { ITribeRepository } from "../../../domain/repositories/tribe.repository";
-import { IRepositoryMetrics } from "../../../application/dtos/tribe.dto";
-import { IRepositoryMetricsParams } from "../../../application/interfaces/tribe.interface";
-import { RepositoryMetricsListMapper } from "../../../application/mappers/repository-metrics-list.mapper";
-import { RepositoryStatesEnum } from "../../../application/enums/repository-states.enum";
-import { RegistryStatusEnum } from "../../../application/enums/registry-status.enum";
+import { RegistryStatusEnum, RepositoryStatesEnum } from "../../../application/enums";
+import { MetricsModel, OrganizationModel, TribeModel } from "../../../infrastructure/models";
+import { IRepositoryMetricsParams } from "../../../application/interfaces";
+import { RepositoryMetricsListMapper } from "../../../application/mappers";
+import { ITribeRepository } from "../../../domain/repositories";
+import { IRepositoryMetrics } from "../../../application/dtos";
 
 class TribeMockRepo implements ITribeRepository {
   private repositoryMapper: RepositoryMetricsListMapper;

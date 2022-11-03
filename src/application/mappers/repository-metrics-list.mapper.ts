@@ -1,12 +1,8 @@
 import axios, { AxiosResponse } from "axios";
-import config from '../../infrastructure/config';
 import { MetricsModel, TribeModel } from "../../infrastructure/models";
-import { findRepositoryVerificationTypesResponseDTO, IRepositoryVerificationType } from "../dtos/repository.dto";
-import { IRepositoryMetrics } from "../dtos/tribe.dto";
-import { RepositoryStatesResponseEnum } from "../enums/repository-states-response.enum";
-import { RepositoryStatesEnum } from "../enums/repository-states.enum";
-import { RepositoryVerificationStatesResponseEnum } from "../enums/repository-verification-states-response.enum";
-import { RepositoryVerificationStatesEnum } from "../enums/repository-verification-states.enum";
+import config from '../../infrastructure/config';
+import { findRepositoryVerificationTypesResponseDTO, IRepositoryMetrics, IRepositoryVerificationType } from "../dtos";
+import { RepositoryStatesEnum, RepositoryStatesResponseEnum, RepositoryVerificationStatesEnum, RepositoryVerificationStatesResponseEnum } from "../enums";
 
 class RepositoryMetricsListMapper {
   private _config: any;

@@ -1,5 +1,5 @@
-import { IOrganizationRepository } from "../../domain/repositories/organization.repository";
-import { createOrganizationRequestDTO, createOrganizationResponseDTO, deleteOrganizationResponseDTO, editOrganizationRequestDTO, editOrganizationResponseDTO, findOrganizationInfoResponseDTO } from "../dtos/organization.dto";
+import { IOrganizationRepository } from "../../domain/repositories";
+import { createOrganizationRequestDTO, createOrganizationResponseDTO, deleteOrganizationResponseDTO, editOrganizationRequestDTO, editOrganizationResponseDTO, findOrganizationInfoResponseDTO } from "../dtos";
 
 class OrganizationUseCase {
 

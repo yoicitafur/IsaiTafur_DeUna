@@ -1,7 +1,7 @@
 import fastify, { FastifyInstance } from 'fastify';
 import pino, { Logger } from 'pino';
 import config from './infrastructure/config';
-import { DatabaseService } from './infrastructure/db/postgresql-adapter';
+import { DatabaseService } from './infrastructure/db';
 
 class App {
   public app: FastifyInstance;

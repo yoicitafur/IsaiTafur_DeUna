@@ -1,5 +1,5 @@
-import { IRepositoryRepository } from "../../domain/repositories/repository.repository";
-import { findRepositoryVerificationTypesResponseDTO } from "../dtos/repository.dto";
+import { IRepositoryRepository } from "../../domain/repositories";
+import { findRepositoryVerificationTypesResponseDTO } from "../dtos";
 
 class RepositoryUseCase {
 

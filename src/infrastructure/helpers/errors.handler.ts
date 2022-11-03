@@ -1,5 +1,5 @@
-import { ResponseInterface } from './response.interface'
 import { FastifyReply } from 'fastify'
+import { ResponseInterface } from '.'
 
 const reply = async (replyponseData: ResponseInterface, reply: FastifyReply) => {
 

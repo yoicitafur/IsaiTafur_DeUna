@@ -1,5 +1,4 @@
-import { RegistryStatusEnum } from "../enums/registry-status.enum";
-import { RepositoryStatesEnum } from "../enums/repository-states.enum";
+import { RegistryStatusEnum, RepositoryStatesEnum } from "../enums";
 
 interface createOrganizationRequestDTO {
   organization: IOrganization;

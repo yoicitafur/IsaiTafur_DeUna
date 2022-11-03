@@ -1,6 +1,6 @@
-import { MetricsModel, OrganizationModel, RepositoryModel, TribeModel } from "src/infrastructure/models";
-import { findOrganizationInfoResponseDTO, IMetrics, IOrganization, IRepository, ITribe } from "../dtos/organization.dto";
-import { IOrganizationInfoBase } from "../interfaces/organization.interface";
+import { MetricsModel, OrganizationModel, RepositoryModel, TribeModel } from "../../infrastructure/models";
+import { findOrganizationInfoResponseDTO, IMetrics, IOrganization, IRepository, ITribe } from "../dtos";
+import { IOrganizationInfoBase } from "../interfaces";
 
 class OrganizationDetailMapper {
 

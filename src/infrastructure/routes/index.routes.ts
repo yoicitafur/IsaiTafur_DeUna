@@ -1,6 +1,6 @@
 import { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import IRoute from './route.interface';
-import * as RouteSet from './routes';
+import * as RouteSet from './route-list';
 
 class Routes {
     public prefix_route = ''

@@ -1,6 +1,5 @@
-import { RegistryStatusEnum } from "../../application/enums/registry-status.enum"
-import { RepositoryStatesEnum } from "../../application/enums/repository-states.enum"
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne, JoinColumn } from "typeorm"
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne } from "typeorm"
+import { RegistryStatusEnum, RepositoryStatesEnum } from "../../application/enums"
 import { MetricsModel, TribeModel } from "."
 
 @Entity({ name: 'repository' })

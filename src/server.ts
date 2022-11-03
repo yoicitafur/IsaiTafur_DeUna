@@ -4,7 +4,7 @@ import Routes from "./infrastructure/routes/index.routes";
 
 const app = new App({
   routes: [Routes],
-  plugins: []
+  plugins: [corsPlugin]
 });
 
 app.listen();

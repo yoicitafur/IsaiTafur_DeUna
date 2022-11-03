@@ -1,10 +1,10 @@
 import { Between, MoreThan, Repository } from "typeorm";
-import { DatabaseService } from "../../db/postgresql-adapter";
+import { DatabaseService } from "../../db";
+import { ITribeRepository } from "../../../domain/repositories";
 import { MetricsModel, TribeModel } from "../../models";
-import { ITribeRepository } from "../../../domain/repositories/tribe.repository";
-import { IRepositoryMetrics } from "../../../application/dtos/tribe.dto";
-import { IRepositoryMetricsParams } from "../../../application/interfaces/tribe.interface";
-import { RepositoryMetricsListMapper } from "../../../application/mappers/repository-metrics-list.mapper";
+import { RepositoryMetricsListMapper } from "../../../application/mappers";
+import { IRepositoryMetricsParams } from "../../../application/interfaces";
+import { IRepositoryMetrics } from "../../../application/dtos";
 
 class TribePostgresqlRepo implements ITribeRepository {
   private tribeRepo: Repository<TribeModel>;

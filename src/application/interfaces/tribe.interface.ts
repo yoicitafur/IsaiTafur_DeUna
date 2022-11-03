@@ -1,4 +1,4 @@
-import { RepositoryStatesEnum } from "../enums/repository-states.enum";
+import { RepositoryStatesEnum } from "../enums";
 
 interface ITribeDetail {
   id: number;

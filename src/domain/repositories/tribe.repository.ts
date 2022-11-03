@@ -1,5 +1,5 @@
-import { IRepositoryMetricsParams } from "../../application/interfaces/tribe.interface";
-import { IRepositoryMetrics } from "../../application/dtos/tribe.dto";
+import { IRepositoryMetricsParams } from "../../application/interfaces";
+import { IRepositoryMetrics } from "../../application/dtos";
 
 interface ITribeRepository {
   findRepositoryMetrics(id: number, params: IRepositoryMetricsParams): Promise<IRepositoryMetrics[]>;

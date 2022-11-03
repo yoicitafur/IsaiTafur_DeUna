@@ -1,4 +1,4 @@
-import { createOrganizationRequestDTO, createOrganizationResponseDTO, deleteOrganizationResponseDTO, editOrganizationRequestDTO, editOrganizationResponseDTO, findOrganizationInfoResponseDTO } from "../../application/dtos/organization.dto";
+import { createOrganizationRequestDTO, editOrganizationRequestDTO, findOrganizationInfoResponseDTO } from "../../application/dtos";
 
 interface IOrganizationRepository {
   createOrganization(data: createOrganizationRequestDTO): Promise<void>;

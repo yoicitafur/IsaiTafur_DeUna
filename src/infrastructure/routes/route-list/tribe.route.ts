@@ -3,10 +3,10 @@ import IRoute from '../route.interface';
 import responseHandler, { responseSender } from '../../helpers/response.handler';
 import { TribeUseCase } from '../../../application/usecases/tribe.usecase';
 import { downloadRepositoryMetricsByTribeResponseDTO, findRepositoriesMetricsOfATribeResponseDTO } from '../../../application/dtos/tribe.dto';
-import { TribePostgresqlRepo } from '../../../infrastructure/repositories/postgresql/tribe-postgresql.repo';
+import { TribePostgresqlRepo } from '../../repositories/postgresql/tribe-postgresql.repo';
 import { ITribeRepository } from '../../../domain/repositories/tribe.repository';
-import { TribeMockRepo } from '../../../infrastructure/repositories/mock/tribe-mock.repo';
-import parseResponse from '../../../infrastructure/helpers/response.parser';
+import { TribeMockRepo } from '../../repositories/mock/tribe-mock.repo';
+import parseResponse from '../../helpers/response.parser';
 
 class TribeRoutes implements IRoute{
   public prefix_route = '/tribes'

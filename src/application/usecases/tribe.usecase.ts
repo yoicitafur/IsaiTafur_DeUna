@@ -1,13 +1,24 @@
 import moment from "moment";
 import { Parser } from "json2csv";
-import { ITribeRepository } from "../../domain/repositories/tribe.repository";
-import { downloadRepositoryMetricsByTribeResponseDTO, findRepositoriesMetricsOfATribeResponseDTO, IRepositoryMetrics } from "../dtos/tribe.dto";
-import { RepositoryStatesEnum } from "../enums/repository-states.enum";
-import { IRepositoryMetricsParams } from "../interfaces/tribe.interface";
+import { RepositoryStatesEnum } from "../enums";
+import { IRepositoryMetricsParams } from "../interfaces";
+import { ITribeRepository } from "../../domain/repositories";
+import { downloadRepositoryMetricsByTribeResponseDTO, findRepositoriesMetricsOfATribeResponseDTO, IRepositoryMetrics } from "../dtos";
 
 class TribeUseCase {
 
   constructor(private readonly tribeRepository: ITribeRepository) {}
+
+  public async getRepositoryMetricsList(tribeId: number): Promise<findRepositoriesMetricsOfATribeResponseDTO> {
+    const repositoryMetrics: IRepositoryMetrics[] = await this._getRepositoryMetricsById(tribeId);
+    if (repositoryMetrics.length === 0) {
+      throw new Error('404: La tribu no tiene repositorios que cumplan con la cobertura necesaria');
+    }
+
+    return {
+      repositories: repositoryMetrics
+    };
+  }
 
   public async downloadRepositoryMetricsList(tribeId: number): Promise<downloadRepositoryMetricsByTribeResponseDTO> {
     const repositoryMetrics: IRepositoryMetrics[] = await this._getRepositoryMetricsById(tribeId);
@@ -58,17 +69,6 @@ class TribeUseCase {
     };
 
     return csvData;
-  }
-
-  public async getRepositoryMetricsList(tribeId: number): Promise<findRepositoriesMetricsOfATribeResponseDTO> {
-    const repositoryMetrics: IRepositoryMetrics[] = await this._getRepositoryMetricsById(tribeId);
-    if (repositoryMetrics.length === 0) {
-      throw new Error('404: La tribu no tiene repositorios que cumplan con la cobertura necesaria');
-    }
-
-    return {
-      repositories: repositoryMetrics
-    };
   }
 
   private async _getRepositoryMetricsById(tribeId: number): Promise<IRepositoryMetrics[]> {

@@ -1,10 +1,9 @@
 import { In, Repository } from "typeorm";
-import { DatabaseService } from "../../db/postgresql-adapter";
-import { MetricsModel, OrganizationModel, RepositoryModel, TribeModel } from "../../models";
-import { IOrganizationRepository } from "../../../domain/repositories/organization.repository";
-import { createOrganizationRequestDTO, editOrganizationRequestDTO, findOrganizationInfoResponseDTO, IRepository, ITribe } from "../../../application/dtos/organization.dto";
-import { OrganizationListMapper } from "../../../application/mappers/organization-list.mapper";
-import { OrganizationDetailMapper } from "../../../application/mappers/organization-detail.mapper";
+import { DatabaseService } from "../../../infrastructure/db";
+import { IOrganizationRepository } from "../../../domain/repositories";
+import { OrganizationDetailMapper, OrganizationListMapper } from "../../../application/mappers";
+import { MetricsModel, OrganizationModel, RepositoryModel, TribeModel } from "../../../infrastructure/models";
+import { createOrganizationRequestDTO, editOrganizationRequestDTO, findOrganizationInfoResponseDTO, IRepository, ITribe } from "../../../application/dtos";
 
 class OrganizationPostgresqlRepo implements IOrganizationRepository {
   private organizationRepo: Repository<OrganizationModel>;

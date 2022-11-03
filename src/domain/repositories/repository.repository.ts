@@ -1,4 +1,4 @@
-import { IRepositoryVerificationType } from "../../application/dtos/repository.dto";
+import { IRepositoryVerificationType } from "../../application/dtos";
 
 interface IRepositoryRepository {
   findRepositoryVerificationTypes(): Promise<IRepositoryVerificationType[]>

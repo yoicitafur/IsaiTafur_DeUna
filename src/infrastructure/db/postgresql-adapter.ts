@@ -16,6 +16,11 @@ export const DatabaseService: DataSource = new DataSource(
     extra: {
       options: routingId
     },
-    entities: [OrganizationModel, TribeModel, RepositoryModel, MetricsModel]
+    entities: [
+      OrganizationModel,
+      TribeModel,
+      RepositoryModel,
+      MetricsModel
+    ]
   }
 )

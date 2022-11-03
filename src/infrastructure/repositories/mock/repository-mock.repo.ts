@@ -1,5 +1,5 @@
-import { IRepositoryVerificationType } from "../../../application/dtos/repository.dto";
-import { IRepositoryRepository } from "../../../domain/repositories/repository.repository";
+import { IRepositoryRepository } from "../../../domain/repositories";
+import { IRepositoryVerificationType } from "../../../application/dtos";
 
 class RepositoryMockRepo implements IRepositoryRepository {
 
