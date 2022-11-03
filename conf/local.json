@@ -1,0 +1,16 @@
+{
+  "app": {
+    "domain": "localhost",
+    "kind": "development",
+    "port": 8084
+  },
+  "db": {
+    "postgresql": {
+      "connectionString": "postgresql://itafur:NsSxXCECZ6Y_AuwzjcsJZw@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/metricsdb?sslmode=verify-full&options=--cluster%3Dfading-kiwi-6235",
+      "synchronize": true
+    }
+  },
+  "endpoints": {
+    "REPOSITORY_VERIFICATION_STATES": "repository-verification-codes"
+  }
+}
